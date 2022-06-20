@@ -4,9 +4,9 @@ pipeline {
 
     stages {
 
-        stage ('Git Checkout') {
+        stage ('Pipeline') {
             steps {
-                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/raghavendra1991/docker_pipeline.git'
+                    echo "My Frist Pipeline Job"
                 }
           }
         
