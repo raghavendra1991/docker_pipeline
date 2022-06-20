@@ -1,12 +1,14 @@
-// Declarative pipeline
+  // Declarative pipeline
 pipeline {
-   agent any
+    agent any
 
-   stages {
-    stage('Checkout') {
-      steps {
-        checkout scm
-      }
-    }
-  }
+    stages {
+
+        stage ('Git Checkout') {
+            steps {
+                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/raghavendra1991/docker_pipeline.git'
+                }
+          }
+        
+     }
 }
